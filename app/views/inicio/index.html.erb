@@ -1,0 +1,20 @@
+<h1>Inicio</h1> 
+
+
+<% if user_authenticated? %>
+  <div class="row">
+    <div class="col">
+      <%= link_to 'Logout', logout_path %>
+    </div>
+  </div>
+
+  
+<% else %>
+  <div class="row">
+    <div class="col">
+    <div>
+      <%= link_to 'Registrarse', new_user_path %>
+      <%= link_to 'Iniciar Sesion', new_session_path %>
+    </div>
+  </div>
+  <%end%>
